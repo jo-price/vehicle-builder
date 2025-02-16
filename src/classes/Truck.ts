@@ -54,9 +54,15 @@ class Truck extends Vehicle implements AbleToTow {
   // TODO: Implement the tow method from the AbleToTow interface
   tow(vehicle: Truck | Motorbike | Car): void {
     // TODO: Get the make an model of the vehicle if it exists
+    console.log(`Make: ${this.make} | Model: ${this.model}`);
     // TODO: Check if the vehicle's weight is less than or equal to the truck's towing capacity
+    if (this.weight <= this.towingCapacity) {
     // TODO: If it is, log that the vehicle is being towed
+      console.log('Vehicle is being towed.');
     // TODO: If it is not, log that the vehicle is too heavy to be towed
+    } else {
+      console.log('Vehicle is too heavy to be towed.');
+    }
   }
 
   // TODO: Override the printDetails method from the Vehicle class
