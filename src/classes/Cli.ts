@@ -260,8 +260,6 @@ class Cli {
           parseInt(answers.year),
           parseInt(answers.weight),
           parseInt(answers.topSpeed),
-          parseInt(answers.frontWheelDiameter),
-          answers.frontWheelBrand,
           [new Wheel(parseInt(answers.frontWheelDiameter), answers.frontWheelBrand), new Wheel(parseInt(answers.rearWheelDiameter), answers.rearWheelBrand)],
         );
         // TODO: push the motorbike to the vehicles array
@@ -406,7 +404,7 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin) {
               if(this.vehicles[i] instanceof Motorbike){
-              (this.vehicles[i] as Motorbike).wheelie();
+              (this.vehicles[i] as Motorbike).wheelie;
               }else {console.log('This vehicle cannot perform a wheelie.');
               }
             }
